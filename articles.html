@@ -20,9 +20,13 @@ ce qui permet à d'autres opérations de se dérouler indépendamment.
  -->
       <nav class="menu">
         <h1 class="secondary-txt">Mon Blog de ...</h1>
-        <h1 id="special" class="secondary-txt" >Mon Blog de ...</h1>
-        <h1 class="secondary-txt plus-plus-special"  style="color: blue">Mon Blog de ...</h1>
-        <h1 class="secondary-txt" id="plus-plus-special" style="color: blue">Mon Blog de ...</h1>
+        <h1 id="special" class="secondary-txt">Mon Blog de ...</h1>
+        <h1 class="secondary-txt plus-plus-special" style="color: blue">
+          Mon Blog de ...
+        </h1>
+        <h1 class="secondary-txt" id="plus-plus-special" style="color: blue">
+          Mon Blog de ...
+        </h1>
         <ul id="nav-menu">
           <li><a href="/">Accueil</a></li>
           <li><a href="/fakeSignin.html">Connexion de l'utilisateur</a></li>
@@ -30,23 +34,47 @@ ce qui permet à d'autres opérations de se dérouler indépendamment.
         </ul>
       </nav>
     </header>
-
-    <section>
+    <section id="articles-list">
       <div>
         <h2>Les Articles</h2>
         <p>Les articles sont classés par ordre chronologique</p>
       </div>
     </section>
+    <section id="articles-root">
+      <!-- <div>
+        <h3>Titre de l'article</h3>
+        <p>Contenu de l'article</p>
+        <p>Date: <span>02/10/2023</span></p>
+      </div>
+      <div>
+        <h3>Titre de l'article</h3>
+        <p>Contenu de l'article</p>
+        <p>Date: <span>02/10/2023</span></p>
+      </div> -->
+    </section>
 
-    <section>
-      <h3>Titre de l'article</h3>
-      <p>Contenu de l'article</p>
-      <p>Date: <span>02/10/2023</span></p>
-    </section>
-    <section>
-      <h3>Titre de l'article</h3>
-      <p>Contenu de l'article</p>
-      <p>Date: <span>02/10/2023</span></p>
-    </section>
+
+    <!-- Créez un fichier javascript et créez un lien vers ce fichier ici. -->
+    <script>
+      // Define the parent container where you want to append the elements
+      const parentContainer = document.getElementById("articles-root");
+
+      // Function to create and append an article element
+      function createArticle(index) {
+        const article = document.createElement("div");
+        article.innerHTML = `
+    <img src="https://picsum.photos/200/300?random=${index}" alt="place holder" />
+    <h3>Titre de l'article ${index}</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, omnis? ...</p>
+    <a href="/blog-post.html?articleID=${index}"  >plus ...</a>
+  `;
+        parentContainer.appendChild(article);
+      }
+
+      // Create 10 articles
+      for (let i = 1; i <= 10; i++) {
+        createArticle(i);
+      }
+    </script>
   </body>
 </html>
