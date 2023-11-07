@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>articles</title>
+
+    <!-- css chargement synchrone. Ce qui vient en dernier a la plus haute priorité. -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/articles.css" />
+  </head>
+  <body>
+    <header>
+      <!-- L'ordre dans lequel les choses sont appelées est extrêmement important.
+C'est ce qu'on appelle le chargement synchrone. En css, il s'agit de la partie cascade (synchrone) des "cascading style sheets". 
+En principe, l'étape 1 est suivie de l'étape 2, puis de l'étape 3.
+L'autre type de chargement est appelé opérations "asynchrones" et ne bloque pas l'exécution du code, 
+ce qui permet à d'autres opérations de se dérouler indépendamment.
+ -->
+      <nav class="menu">
+        <h1 class="secondary-txt">Mon Blog de ...</h1>
+        <h1 id="special" class="secondary-txt" >Mon Blog de ...</h1>
+        <h1 class="secondary-txt plus-plus-special"  style="color: blue">Mon Blog de ...</h1>
+        <h1 class="secondary-txt" id="plus-plus-special" style="color: blue">Mon Blog de ...</h1>
+        <ul id="nav-menu">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/fakeSignin.html">Connexion de l'utilisateur</a></li>
+          <li><a href="/articles.html">Articles</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <div>
+        <h2>Les Articles</h2>
+        <p>Les articles sont classés par ordre chronologique</p>
+      </div>
+    </section>
+
+    <section>
+      <h3>Titre de l'article</h3>
+      <p>Contenu de l'article</p>
+      <p>Date: <span>02/10/2023</span></p>
+    </section>
+    <section>
+      <h3>Titre de l'article</h3>
+      <p>Contenu de l'article</p>
+      <p>Date: <span>02/10/2023</span></p>
+    </section>
+  </body>
+</html>

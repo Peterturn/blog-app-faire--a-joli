@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <a href="/"><img src="/icons8-home-24.png" alt="home"></a>
+    <div>
+      <img src="https://picsum.photos/200/300?random=2" alt="" />
+      <h3>Titre de l'article <span id="articleNum">1</span></h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat numquam
+        doloribus quasi voluptatibus amet provident blanditiis adipisci illo
+        consectetur repellat quo sed deserunt nostrum, eum, veritatis qui
+        doloremque cum reprehenderit. Nemo deserunt, exercitationem cum
+        distinctio obcaecati provident quo, ipsam enim itaque quasi asperiores
+        quibusdam dolor nostrum aut debitis placeat odio repellendus dolore?
+        Magni distinctio quos ad tempore eligendi earum. Deleniti. Consectetur
+        odit asperiores, ea necessitatibus expedita ipsum veniam totam
+        repudiandae aperiam dicta ipsa dignissimos minus et alias reiciendis
+        optio eius cum. Iure, a! Eos quas eaque exercitationem laboriosam?
+        Facilis, iusto! Ut, quis sint! Porro atque recusandae cum exercitationem
+        architecto veritatis, doloremque et laudantium non. Sunt vel tenetur,
+        inventore fugiat, consequatur deleniti eligendi minus voluptatibus
+        repudiandae nostrum voluptates architecto delectus harum! Reprehenderit
+        repellendus voluptas optio nihil perferendis quos eaque maiores,
+        voluptatibus quo vitae iste quidem accusantium, illo, similique tempora
+        quibusdam amet culpa! Dignissimos iusto ratione nesciunt excepturi
+        eveniet cumque ad impedit. Saepe, provident explicabo! Explicabo, vero
+        excepturi voluptatem saepe at quidem vitae cum id ipsam ratione eos modi
+        alias nulla blanditiis laboriosam! A, quis totam! Velit esse numquam
+        perferendis illum dolore! Eum excepturi consequuntur voluptatem, quaerat
+        deleniti animi rem nobis dolore architecto, accusamus quibusdam neque
+        sed exercitationem fuga minus nihil laudantium voluptas beatae numquam
+        qui minima! Recusandae doloribus eius aliquid architecto. Alias, saepe
+        velit distinctio laboriosam itaque, dicta enim necessitatibus qui odio
+        asperiores similique doloribus veniam unde eligendi maxime vel incidunt
+        mollitia facere facilis aut explicabo harum aperiam inventore! Maxime,
+        inventore. At quo, amet atque quibusdam minus tenetur cumque accusamus
+        vel sed recusandae quasi ipsa fugit vitae? Et maxime aperiam impedit,
+        distinctio voluptates nam repudiandae sequi iste praesentium dolorem,
+        perspiciatis optio! Odit ea nobis soluta reiciendis minus? Nemo, tempore
+        id. Voluptatibus alias praesentium quasi cupiditate similique provident
+        inventore earum natus ut quisquam, quaerat rem quos. Eius eveniet
+        voluptas deleniti? Dolorum, vero! Maiores, animi. Quisquam nisi ducimus
+        sapiente. Ratione veritatis veniam quis ullam a dolorem distinctio sed
+        voluptates repellat, asperiores iure quidem similique quibusdam unde
+        beatae odit vel eius aut quod aperiam? Esse consequuntur quasi provident
+        alias sunt illum a enim aperiam sit voluptas soluta quibusdam mollitia,
+        similique velit hic in magnam distinctio libero recusandae nihil! Culpa
+        asperiores voluptatibus suscipit veritatis minus. Similique asperiores
+        aut molestiae voluptatibus qui amet repellendus ad, mollitia, explicabo
+        quibusdam distinctio ex quo praesentium. Commodi sequi vitae perferendis
+        nam quod incidunt esse sed voluptatem sapiente, similique, ut iste!
+        Consectetur nostrum excepturi fugit unde qui incidunt earum ipsum sint
+        deserunt ipsa dolor, mollitia, aspernatur necessitatibus cupiditate
+        laudantium nam obcaecati libero animi at facilis quia inventore
+        asperiores nulla. Beatae, itaque. Quia dignissimos nihil, perferendis
+        suscipit maiores corporis consequatur aperiam atque cupiditate sed
+        incidunt voluptas officiis quas, soluta ratione rem expedita deserunt
+        quidem repudiandae assumenda aliquid. Rem doloribus nihil facere
+        quibusdam? Nam enim dolore exercitationem illum, quis ipsum ad quo rerum
+        soluta hic ab sit expedita ducimus nemo eaque laudantium corrupti illo
+        consequatur repellendus quibusdam vel. Vel architecto animi nisi eaque.
+        Veritatis deserunt impedit vero. Recusandae consequatur odit pariatur
+        neque qui. Eum aperiam ex optio et velit iste consequatur, non pariatur
+        minima, possimus quo excepturi officiis tenetur vel. Voluptates, iste
+        sapiente. Similique illo nam asperiores. Facilis amet cupiditate ea
+        similique praesentium magni a quisquam labore corporis voluptatem, in
+        harum officia? Earum doloribus, incidunt sint sapiente reiciendis
+        dolores mollitia expedita repellat vitae. Nostrum, atque ex numquam ipsa
+        doloremque, corporis fugit quaerat explicabo incidunt laborum tempora!
+        Incidunt soluta ipsam dolorem accusamus aliquam! Exercitationem natus
+        eius suscipit quasi ducimus tenetur hic odit repudiandae aut? Atque
+        ipsam asperiores, accusantium excepturi temporibus deserunt eius quam,
+        culpa ex necessitatibus consequuntur explicabo dolores quos possimus?
+        Voluptas, voluptatibus. Repellendus perspiciatis quam iste quisquam, et
+        reprehenderit doloribus fugiat aliquam itaque.
+      </p>
+    </div>
+    <script>
+      // Get the current URL
+      const queryParams = new URLSearchParams(window.location.search);
+      // Use the URLSearchParams API to parse the query string
+
+      const articleId = queryParams.get("articleID");
+      console.log(articleId);
+      if (articleId) {
+        document.getElementById("articleNum").innerText = articleId;
+      }
+    </script>
+  </body>
+</html>
