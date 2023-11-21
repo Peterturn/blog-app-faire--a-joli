@@ -11,3 +11,14 @@
 #plus-plus-special {
   color: rgb(30, 78, 43) !important;
 }
+/* Parent des articles */
+#articles-root {
+  
+}
+/* Parent des articles  */
+#articles-root > div {
+  max-width: 65%;
+ border-color: red;
+ border-width: 1px;
+ 
+}
