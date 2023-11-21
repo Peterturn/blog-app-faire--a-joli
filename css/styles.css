@@ -20,6 +20,16 @@ element (h1, h2, p, div, main, header ...)
 
 
 
+/* ****************** GLOBAL ****************** */
+li {
+  list-style: none;
+}
+a {
+  color: #be7656;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* ****************** FONTS ****************** */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 h1 {
@@ -29,22 +39,75 @@ h1 {
   line-height: 1.2;
 }
 
-.article-listing{ 
-  display: flex;
-  flex-direction: row;
-}
-/* ****************** MOBILE ****************** */
+
+
+/* ****************** MOBILE SM ****************** */
 @media (max-width: 575px) {
   /* Styles pour les écrans extra small (XS) */
+  h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+  }
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; 
   }
   p {
     font-size: 0.8rem;
-    color: red;
+    color: #0e0504;
   }
-  .article-listing{ 
+  
+  /* NAV styles */
+  #nav-menu{
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:aliceblue;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: #4b1f0e 1px solid;
+    text-transform: capitalize;
+    
+  }
+  #nav-menu{
+    background-color: #4b1f0e;
+    color: aliceblue;
+  }
+
+  /* articles parent */
+  #article-listing{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* article cards */
+  #article-listing > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    max-width: 65%;
+    border: 1px solid black;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+    /* Article Images  */
+  #article-listing > div > img{
+    max-width: 50%;
+    border-radius: 12px;
+  }
+
+  #article-listing > div > p{
+    color:#b94336;
+    text-align: center;
+  }
+  #article-listing > div > h3{
+    color:#be7656;
+    text-align: center;
+  }
+  #article-listing > div > a{
+    text-align: center;
   }
 }
 
