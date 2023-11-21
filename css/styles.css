@@ -75,14 +75,14 @@ h1 {
   }
 
   /* articles parent */
-  #article-listing{ 
+  .article-listing{ 
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   /* article cards */
-  #article-listing > div{
+  .article-listing > div{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,20 +93,20 @@ h1 {
     margin-bottom: 12px;
   }
     /* Article Images  */
-  #article-listing > div > img{
+  .article-listing > div > img{
     max-width: 50%;
     border-radius: 12px;
   }
 
-  #article-listing > div > p{
+  .article-listing > div > p{
     color:#b94336;
     text-align: center;
   }
-  #article-listing > div > h3{
+  .article-listing > div > h3{
     color:#be7656;
     text-align: center;
   }
-  #article-listing > div > a{
+  .article-listing > div > a{
     text-align: center;
   }
 }
