@@ -29,6 +29,8 @@ Trouvez ci-dessous une liste de ressources en ligne pour apprendre CSS :
 8. [Flexbox playground](https://codepen.io/enxaneta/full/adLPwv)
     - Tutoriels Flex pour les débutants.
 
+8. [Free Code Camp](https://www.freecodecamp.org)
+    - Tutoriels Flex pour les débutants. - EN
 
 #
 
