@@ -1,36 +1,43 @@
-/* 
-.class
-#id
-element (h1, h2, p, div, main, header ...)
-
-*/
-
-.primary-txt {
-  color: #0e0504;
+:root {
+  --oxford-red: #b43049;
+  --primary-black: #565656;
+  --tan-color: #c09f80;
+  --light-sand: #d7cec7;
+  --white: #f8f8f8;
+  --black: #1d1c1c;
 }
-.dark-tan {
-  color: #4b1f0e;
+
+/* Class Naming: Use consistent kebab-case */
+.primary-txt {
+  color: var(--primary-black);
 }
 .secondary-txt {
-  color: #be7656;
+  color: var(--oxford-red);
 }
 .light-tan {
-  color: #efc3a4;
+  color: var(--tan-color);
+}
+.light-sand {
+  color: var(--light-sand);
+}
+.white-txt {
+  color: var(--white);
+}
+.black-txt {
+  color: var(--black);
 }
 
-
-
-/* ****************** GLOBAL ****************** */
+/* Global Styles */
 li {
   list-style: none;
 }
 a {
-  color: #be7656;
+  color: var(--oxford-red);
   text-decoration: none;
   cursor: pointer;
 }
 
-/* ****************** FONTS ****************** */
+/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 h1 {
   font-family: "Montserrat", sans-serif;
@@ -38,95 +45,169 @@ h1 {
   font-size: 2.5rem;
   line-height: 1.2;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--oxford-red);
+}
 
-
-
-/* ****************** MOBILE SM ****************** */
+#special, .secondary-txt.plus-plus-special, .secondary-txt#plus-plus-special {
+  display: none;
+}
+/* Mobile Styles */
 @media (max-width: 575px) {
-  /* Styles pour les écrans extra small (XS) */
-  h1, h2, h3, h4, h5, h6, p {
+  body {
+    padding-top: 60px; /* Add padding to body to account for sticky header */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
     text-align: center;
   }
   h1 {
-    font-size: 1.5rem; 
+    font-size: 1.6rem;
+    color: var(--oxford-red);
   }
   p {
     font-size: 0.8rem;
-    color: #0e0504;
+    color: var(--primary-black);
   }
-  
-  /* NAV styles */
-  #nav-menu{
+
+  #nav-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color:aliceblue;
+    background-color: var(--light-sand);
     padding: 12px;
     border-radius: 12px;
     margin-bottom: 12px;
-    border: #4b1f0e 1px solid;
-    text-transform: capitalize;
-    
-  }
-  #nav-menu{
-    background-color: #4b1f0e;
-    color: aliceblue;
   }
 
-  /* articles parent */
-  .article-listing, #articles-root{ 
+  /* Nav Buttons */
+  #nav-menu > li {
+    min-width: 80%;
+    flex: 1;
+    flex-basis: auto;
+    flex-grow: 1;
+    background-color: var(--primary-black);
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin: 12px 0;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  #nav-menu > li > a {
+    text-transform: uppercase;
+    color: var(--white);
+  }
+  /* add hover affect */
+  #nav-menu > li:hover,
+  #nav-menu > li:hover > a {
+    background-color: var(--white);
+    color: var(--primary-black);
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  .article-listing,
+  #articles-root {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  /* article cards */
-  .article-listing > div, #articles-root > div{
+  /* START ARTICLE CARD */
+  .article-listing > div,
+  #articles-root > div {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 12px;
     max-width: 65%;
-    border: 1px solid black;
+    border: 1px solid var(--primary-black);
     border-radius: 12px;
     margin-bottom: 12px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
   }
-    /* Article Images  */
-  .article-listing > div > img{
-    max-width: 50%;
+
+  .article-listing > div > img,
+  #articles-root > div > img {
+    max-width: 60%;
     border-radius: 12px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
   }
 
-  .article-listing > div > p{
-    color:#b94336;
+  .article-listing > div > img:hover,
+  #articles-root > div > img:hover {
+    /* create a flip image animation effect on hover */
+    transform: rotateZ(360deg);
+  }
+
+  .article-listing > div > p {
     text-align: center;
   }
-  .article-listing > div > h3{
-    color:#be7656;
+
+  .article-listing > div > h3 {
+    color: var(--oxford-red);
     text-align: center;
   }
-  .article-listing > div > a{
+
+  .article-listing > div > a,
+  .article-listing > div > p,
+  .article-listing > div > h3 {
     text-align: center;
+  }
+  .article-listing > div > a,
+  #articles-root > div > a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: var(--primary-black);
+    color: var(--white);
+    padding: 4px 8px;
+    /* replace html content with an arrow */
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transform: rotate(5deg);
+  }
+  .article-listing > div > a:hover,
+  #articles-root > div > a:hover {
+    /* make button grow a little on hover */
+    transform: scale(1.3) rotate(10deg);
+    background-color: var(--white);
+    border-style: dotted;
+    color: var(--primary-color);
+  }
+  /* create sticky floating up arrow  */
+  #up-arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px;
+    cursor: pointer;
+    display: block;
+  }
+  #up-arrow > a > img {
+    width: 40px;
+    height: 40px;
   }
 }
 
-/* ****************** MOBILE XL ****************** */
-@media (min-width: 576px) and (max-width: 767px) {
-  /* Styles pour les écrans small (SM) */
-}
+/* Tablet Styles 
 
-/* ****************** TABLETTE ****************** */
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Styles pour les écrans medium (MD) */
-}
-
-/* ****************** ORDINATEUR ****************** */
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* Styles pour les écrans large (LG) */
-}
-
-/* ****************** ORDINATEUR XL ****************** */
-@media (min-width: 1200px) {
-  /* Styles pour les écrans extra large (XL) */
-}
+/* Additional Media Queries can follow */

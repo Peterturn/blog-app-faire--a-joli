@@ -13,7 +13,7 @@
     <div class="alert alert-secondary" hidden="true" role="alert">
       Une simple alerte - vérifiez-la !
     </div>
-    <header>
+    <header id="top">
       <!-- Titre -->
       <!-- image html ou CSS -->
       <nav class="menu">
@@ -77,10 +77,28 @@
         </div>
       </section>
     </main>
+    <div id="up-arrow">
+      <a href="#top"><img src="/icons8-up-100.png" alt=""></a>
+    </div>
     <footer>
       <p>© 2021 - Mon Blog de ...</p>
     </footer>
 
+    <script>
+      document.getElementById('nav-menu').addEventListener('click', function(event) {
+        handleNavMenuClick(event);
+      });
+      
+      function handleNavMenuClick(event) {
+        const listItem = event.target.closest('li');
+        const link = listItem.querySelector('a');
+    
+        // Navigate to the link's href
+        if (listItem && link && link.href) {
+          window.location.href = link.href;
+        }
+      }
+    </script>
     
   </body>
 </html>
