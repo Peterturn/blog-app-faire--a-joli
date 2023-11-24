@@ -1,0 +1,41 @@
+:root {
+    --oxford-red: #b43049;
+    --primary-black: #565656;
+    --tan-color: #c09f80;
+    --light-sand: #d7cec7;
+    --white: #f8f8f8;
+    --black: #1d1c1c;
+  }
+.home-btn{
+    /* make sticky */
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: var(--white);
+    border: 1px solid var(--primary-black);
+    color: var(--white);
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+
+}
+.card{
+    border: solid 1px var(--oxford-red);
+    margin: 10px 5px;
+    border-radius: 12px;
+    padding: 12px 20px;
+    background-color: var(--light-sand);
+}
+
+.card-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-title > img{
+    max-width: 30%;
+    border-radius: 12px;
+}

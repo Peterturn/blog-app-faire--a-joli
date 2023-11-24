@@ -153,7 +153,7 @@ h6 {
   .article-listing > div > img:hover,
   #articles-root > div > img:hover {
     /* create a flip image animation effect on hover */
-    transform: rotateZ(360deg);
+    transform: rotateY(360deg);
   }
 
   .article-listing > div > p {
