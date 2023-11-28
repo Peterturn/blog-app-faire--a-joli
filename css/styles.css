@@ -58,7 +58,7 @@ h6 {
   display: none;
 }
 /* Mobile Styles */
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   body {
     padding-top: 60px; /* Add padding to body to account for sticky header */
   }
@@ -104,11 +104,14 @@ h6 {
     margin: 12px 0;
     text-align: center;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
   }
   
   #nav-menu > li > a {
     text-transform: uppercase;
     color: var(--white);
+    min-width: 90%;
   }
   /* add hover affect */
   #nav-menu > li:hover,
@@ -208,6 +211,42 @@ h6 {
   }
 }
 
-/* Tablet Styles 
 
-/* Additional Media Queries can follow */
+/* Computer Styles */
+@media (min-width: 768px) and (max-width: 991px) {
+  #nav-menu > li {
+    min-width: 50%;
+  }
+
+  .article-listing > div,
+  #articles-root > div {
+    max-width: 75%;
+  }
+
+  .article-listing > div > img,
+  #articles-root > div > img {
+    max-width: 60%;
+  }
+}
+
+/* Large Computer Styles */
+@media (min-width: 992px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  #nav-menu > li {
+    min-width: 40%;
+  }
+
+  .article-listing > div,
+  #articles-root > div {
+    max-width: 70%;
+  }
+
+  .article-listing > div > img,
+  #articles-root > div > img {
+    max-width: 50%;
+  }
+}
+
