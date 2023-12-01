@@ -44,9 +44,7 @@
   box-shadow: -2px -2px 2px 1px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.2s ease;
 }
-.card > div:first-child{
-  flex-grow: 1;
-}
+
 .card > div:last-child{
   flex-grow: 0;
 }
