@@ -3,7 +3,6 @@
 Trouvez ci-dessous une liste de ressources en ligne pour apprendre CSS :
 
 ## Cours et Tutoriels
-
    
 1. [Créez votre site web avec HTML5 et CSS3](https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3)
    - Cours complet pour débutants - FR. 

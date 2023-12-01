@@ -28,7 +28,7 @@ ce qui permet à d'autres opérations de se dérouler indépendamment.
       </nav>
     </header>
     
-    <section id="articles-root">
+    <section id="root">
       <!-- Articles added with javascript code -->
     </section>
     <div id="up-arrow">
@@ -37,18 +37,18 @@ ce qui permet à d'autres opérations de se dérouler indépendamment.
 
     <!-- Créez un fichier javascript et créez un lien vers ce fichier ici. -->
     <script>
-      const parentContainer = document.getElementById("articles-root");
+      const parentContainer = document.getElementById("root");
 
       // Function to create and append an article element
       function createArticle(index) {
         const article = document.createElement("div");
         article.classList.add("card");
         article.innerHTML = `
-    <img src="https://picsum.photos/200/300?random=${index}" alt="place holder" />
-    <h3>Titre de l'article ${index}</h3>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, omnis? ...</p>
-    <a href="/blog-post.html?articleID=${index}"  >plus ...</a>
-  `;
+          <img src="https://picsum.photos/200/300?random=${index}" alt="place holder" />
+          <h3>Titre de l'article ${index}</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, omnis? ...</p>
+          <a class="btn" href="/blog-post.html?articleID=${index}"  >plus ...</a>
+        `;
         parentContainer.appendChild(article);
       }
 

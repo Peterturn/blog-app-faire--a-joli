@@ -20,9 +20,54 @@
 #plus-plus-special {
   color: rgb(30, 78, 43) !important;
 }
+#root {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjust this based on your design preference */
+}
 
-.card{
-  border: #1d1c1c solid 4px;
-  max-width: 100px;
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  margin: 10px; /* Adjust the margin as needed */
+  box-sizing: border-box;
+  border: #412e31 solid 2px;
   border-radius: 12px;
+  padding: 15px 10px;
+  text-align: center;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+}
+/* reverse the card shadow on hover with small transition*/
+.card:hover {
+  box-shadow: -2px -2px 2px 1px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease;
+}
+.card > div:last-child{
+  flex-grow: 0;
+}
+.card > img{
+  border-radius: 12px;
+}
+.btn {
+  background-color: var(--primary-black);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin: 12px 0;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  color: var(--white);
+  text-transform: uppercase;
+  min-width: 90%;
+}
+
+.btn:hover {
+  background-color: var(--oxford-red);
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
 }
