@@ -19,14 +19,7 @@ L'autre type de chargement est appelé opérations "asynchrones" et ne bloque pa
 ce qui permet à d'autres opérations de se dérouler indépendamment.
  -->
       <nav class="menu">
-        <h1 class="secondary-txt">Mon Blog de ...</h1>
-        <h1 id="special" class="secondary-txt">Mon Blog de ...</h1>
-        <h1 class="secondary-txt plus-plus-special" style="color: blue">
-          Mon Blog de ...
-        </h1>
-        <h1 class="secondary-txt" id="plus-plus-special" style="color: blue">
-          Mon Blog de ...
-        </h1>
+        <h1>Mon Blog de ...</h1>
         <ul id="nav-menu">
           <li><a href="/">Accueil</a></li>
           <li><a href="/fakeSignin.html">Connexion de l'utilisateur</a></li>
@@ -34,13 +27,10 @@ ce qui permet à d'autres opérations de se dérouler indépendamment.
         </ul>
       </nav>
     </header>
-    <section id="articles-list">
-      <div>
-        <h2>Les Articles</h2>
-        <p>Les articles sont classés par ordre chronologique</p>
-      </div>
+    
+    <section id="articles-root">
+      <!-- Articles added with javascript code -->
     </section>
-    <section id="articles-root"></section>
     <div id="up-arrow">
       <a href="#top"><img src="/icons8-up-100.png" alt=""></a>
     </div>
@@ -52,6 +42,7 @@ ce qui permet à d'autres opérations de se dérouler indépendamment.
       // Function to create and append an article element
       function createArticle(index) {
         const article = document.createElement("div");
+        article.classList.add("card");
         article.innerHTML = `
     <img src="https://picsum.photos/200/300?random=${index}" alt="place holder" />
     <h3>Titre de l'article ${index}</h3>
