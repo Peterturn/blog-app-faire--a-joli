@@ -54,6 +54,15 @@ h6 {
   color: var(--oxford-red);
 }
 
+/* Large Screen */
+#my-id{
+  display: none;
+}
+
+.my-class{
+  display: none;
+}
+
 #special, .secondary-txt.plus-plus-special, .secondary-txt#plus-plus-special {
   display: none;
 }
@@ -229,7 +238,7 @@ h6 {
   }
 }
 
-/* Large Computer Styles */
+/* Large Computer Styles
 @media (min-width: 992px) {
   h1 {
     font-size: 2.5rem;
@@ -248,5 +257,5 @@ h6 {
   #articles-root > div > img {
     max-width: 50%;
   }
-}
+} */
 
