@@ -10,7 +10,6 @@
 .secondary-txt {
   color: var(--oxford-red);
 }
-
 #special {
   color: rgb(102, 33, 33) !important;
 }
@@ -26,7 +25,6 @@
   flex-wrap: wrap;
   justify-content: space-around; /* Adjust this based on your design preference */
 }
-
 .card {
   display: flex;
   flex-direction: column;
@@ -45,6 +43,9 @@
 .card:hover {
   box-shadow: -2px -2px 2px 1px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.2s ease;
+}
+.card > div:first-child{
+  flex-grow: 1;
 }
 .card > div:last-child{
   flex-grow: 0;
